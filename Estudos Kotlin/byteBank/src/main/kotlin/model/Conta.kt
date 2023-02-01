@@ -1,5 +1,7 @@
+package model
+
 /**
- * A classe Conta possui campos e métodos que representam uma
+ * A classe model.Conta possui campos e métodos que representam uma
  * conta bancária.
  * @param nomeCliente o nome do titular da conta
  * @param numeroConta o número da conta bancária
@@ -35,10 +37,10 @@ class Conta(
 
     /**
      * Este método recebe como argumento um valor e uma conta destino e
-     * faz a transferência desse valor do objeto atual para o objeto Conta
+     * faz a transferência desse valor do objeto atual para o objeto model.Conta
      * destino.
      * @param valor o valor a ser transferido
-     * @param destino uma instância da classe Conta, que receberá o valor da
+     * @param destino uma instância da classe model.Conta, que receberá o valor da
      * transferência
      * */
     fun transfere(valor: Double, destino: Conta): Boolean {
@@ -54,6 +56,6 @@ class Conta(
      * @return uma String com os campos da classe formatados
      * */
     override fun toString(): String {
-        return "Nome Cliente: $nomeCliente\nNumero da Conta: $numeroConta\nSaldo: R$ $saldo\n"
+        return "Nome Cliente: $nomeCliente\nNumero da model.Conta: $numeroConta\nSaldo: R$ $saldo\n"
     }
 }
