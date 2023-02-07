@@ -5,7 +5,12 @@ open class Funcionario(
     val cpf: String,
     val salario: Double
 ) {
-    fun getBonificacao(): Double{
-        return this.salario * 0.1;
+    open val bonificacao: Double get() = this.salario * 0.1;
+    override fun toString(): String{
+        return "               Dados do Funcionário            \n" +
+                "Nome: ${nome}\n" +
+                "CPF: ${cpf}\n" +
+                "Salário: R$ ${salario}\n" +
+                "Bonificação: R$ ${bonificacao}";
     }
 }
