@@ -1,4 +1,4 @@
-package model
+package model.Funcionario
 
 open class Gerente (
     nome: String,

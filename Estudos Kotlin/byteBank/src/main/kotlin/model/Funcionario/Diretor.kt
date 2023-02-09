@@ -1,4 +1,4 @@
-package model
+package model.Funcionario
 
 class Diretor (
     nome: String,

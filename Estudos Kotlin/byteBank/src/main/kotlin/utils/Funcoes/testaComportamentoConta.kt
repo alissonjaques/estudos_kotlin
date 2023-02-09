@@ -1,4 +1,4 @@
-import model.Conta
+import model.Conta.Conta
 
 fun testaComportamentoConta() {
     val conta01 = Conta(nomeCliente = "Alisson", numeroConta = 1)

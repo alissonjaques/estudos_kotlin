@@ -1,6 +1,6 @@
-package utils
+package utils.Classes
 
-import model.Funcionario
+import model.Funcionario.Funcionario
 
 class CalculadoraBonificacao {
     var total: Double = 0.0
