@@ -1,18 +1,22 @@
 import model.Diretor
 import model.Funcionario
 import model.Gerente
+import model.Analista;
+import utils.CalculadoraBonificacao
 
 /**
- * A função main permite a execução desse programa
+ * A função main permite a execução deste programa
  * @author Alisson Jaques
  * */
 fun main() {
+    val bonificacao = CalculadoraBonificacao();
     println("\n=========== Bem Vindo ao Byte Bank! ===========")
     print(delimitador)
     val funcionario = Funcionario(
         nome = "Alisson Jaques",
         cpf = "999.999.999-99",
         salario = 2000.0);
+    bonificacao.registraBonificacao(funcionario);
     print("${funcionario}${autentica(funcionario)}\n${delimitador}")
 
     val gerente = Gerente(
@@ -20,7 +24,15 @@ fun main() {
         cpf = "777.777.777-77",
         salario = 2000.0,
         senha = "123456");
+    bonificacao.registraBonificacao(gerente);
     print("${gerente}${autentica(gerente)}\n${delimitador}")
+
+    val analista = Analista(
+        nome = "Frodo Bolseiro",
+        cpf = "555.555.555-55",
+        salario = 1700.0);
+    bonificacao.registraBonificacao(analista);
+    print("${analista}${delimitador}")
 
     val diretor = Diretor(
         nome = "João Francisco da Silva",
@@ -28,7 +40,9 @@ fun main() {
         salario = 4000.0,
         senha = "787878",
         plr = 300.00);
+    bonificacao.registraBonificacao(diretor);
     print("${diretor}${autentica(diretor)}\n${delimitador}")
+    print("Total bonificação: R$${bonificacao.total}\n${delimitador}");
     println("===============================================\n")
 }
 val delimitador: String get() = "-----------------------------------------------\n";

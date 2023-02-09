@@ -7,12 +7,12 @@ class Diretor (
     val senha: String,
     val plr: Double
 ) : Funcionario(nome = nome, cpf = cpf, salario = salario){
-    override val bonificacao: Double get() =  this.salario * 0.3;
+    override val getBonificacao: Double get() =  super.getBonificacao + this.salario + this.plr;
     fun autentica(senha: String): Boolean {
         return this.senha == senha;
     }
     override fun toString() : String{
         return super.toString()
-            .replace("Dados do Funcionário","Dados do Diretor") + "\nPLR: R$ ${plr}";
+            .replace("Dados do Funcionário","Dados do Diretor") + "PLR: R$ ${plr}\n";
     }
 }

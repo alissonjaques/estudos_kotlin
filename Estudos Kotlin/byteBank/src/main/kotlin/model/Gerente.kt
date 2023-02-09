@@ -1,12 +1,12 @@
 package model
 
-class Gerente (
+open class Gerente (
     nome: String,
     cpf: String,
     salario: Double,
     val senha: String
 ) : Funcionario(nome = nome, cpf = cpf, salario = salario){
-    override val bonificacao: Double get() = this.salario * 0.2;
+    override val getBonificacao: Double get() = super.getBonificacao + this.salario;
     fun autentica(senha: String): Boolean {
         return this.senha == senha;
     }
