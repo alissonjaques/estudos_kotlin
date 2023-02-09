@@ -11,6 +11,7 @@ fun main() {
 
 fun testesEstudos(){
     testeFuncionario();
+    // testaContas();
     // testaComportamentoConta();
     // testaCondicoes(100.0);
     // testaLacos();

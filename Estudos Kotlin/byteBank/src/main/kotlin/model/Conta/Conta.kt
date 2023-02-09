@@ -7,7 +7,7 @@ package model.Conta
  * @param numeroConta o número da conta bancária
  * @author Alisson Jaques
  * */
-class Conta(
+open class Conta(
     var nomeCliente: String,
     val numeroConta: Int
 ) {
@@ -29,7 +29,7 @@ class Conta(
      * saldo atual esse valor, realizando um saque na conta.
      * @param valor o valor a ser sacado da conta
      */
-    fun saca(valor: Double) {
+    open fun saca(valor: Double) {
         if (this.saldo >= valor) { // se a conta possuir saldo suficiente
             this.saldo -= valor // realiza o saque
         }
